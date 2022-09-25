@@ -1,0 +1,122 @@
+.header {
+  padding: 1rem 1.2rem 1rem 0.5rem;
+  border-bottom: 1px solid #dddddd;
+  background-color: white;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: 10%;
+  }
+
+  &__logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: $black;
+  }
+  &__links {
+    list-style: none;
+    display: flex;
+  }
+  li {
+    padding-inline: 24px;
+    color: $black;
+    @media(max-width: 575px) {
+      padding-inline: 10px;
+    }
+  }
+}
+
+.filter {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  @media (max-width: 575px) {
+    width: 70%;
+  }
+  &__inputgroup {
+    position: relative;
+    display: flex;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+  }
+  &__inputgroup-prepend {
+    margin-right: -1px;
+  }
+  &__inputgroup-text {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 1.4rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0 0.25rem 0.2rem 0;
+    cursor: pointer;
+  }
+}
+
+.input-group .form-control {
+  flex: 1 1 auto;
+  width: 1%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 1s ease;
+  animation: smoothScroll 1s forwards;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  z-index: 9999;
+  background-color:$white
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-142px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.header-mob {
+  padding: 0.5rem;
+  background: $dark-blue;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    i {
+      color: #fff;
+    }
+  }
+  .filter {
+    width: auto;
+    &__inputgroup {
+      input {
+        // display: none;
+        width: 0;
+        padding: 0;
+        border: 0;
+        transition: all 0.8s ease-in-out;
+        margin-inline-start: auto;
+      }
+    }
+  }
+}

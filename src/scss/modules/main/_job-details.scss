@@ -1,0 +1,81 @@
+.title-details {
+  font-size: 48px;
+  font-weight: 600;
+  padding-block: 1rem;
+}
+.jobs-details {
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+  @media(max-width: 768px) {
+   display:block;
+  }
+  .related-skills {
+    width: 80%;
+    background: white;
+    padding: 1rem;
+    @media(max-width: 768px) {
+      width: 100%;
+    }
+    .description {
+      font-size: 24px;
+      h6 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 18px;
+        padding-bottom: 2rem;
+      }
+    }
+    > h4 {
+      margin-bottom: 1rem;
+      font-size: 24px;
+    }
+    li {
+      background: #f0f0f0;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      h5 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 24px;
+      }
+      p {
+        font-size: 18px;
+      }
+      .info {
+        display: flex;
+        gap: 10rem;
+        font-size: 18px;
+        margin-block: 1rem;
+        @media(max-width: 768px) {
+          display:block;
+        }
+      }
+    }
+  }
+  .related-jobs {
+    background: #d9d9d9;
+    width: 20%;
+    padding: 1rem;
+    @media(max-width: 768px) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    ul {
+      list-style: inherit;
+      padding: 0.5rem 1.5rem;
+      font-size: 18px;
+      text-decoration: underline;
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
