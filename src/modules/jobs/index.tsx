@@ -7,7 +7,6 @@ import { JobsItem } from './model';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearchBy } from '../../redux/action-creators';
 import { State } from '../../redux';
-import AxiosConfiguration from '../../helpers/axiosConfiguration';
 
 const Jobs: React.FC<any> = () => {
   const { loadMore } = useSelector((state: State) => state.job);
@@ -33,7 +32,7 @@ const Jobs: React.FC<any> = () => {
     inputRef.current?.focus();
   }, []);
 
-  AxiosConfiguration();
+
   return (
     <>
       <section
