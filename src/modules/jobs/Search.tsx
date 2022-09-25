@@ -39,6 +39,8 @@ const Search: React.FC<any> = () => {
   const handleSearchChange = (event: string) => {
     setIsLoad(true);
     setInputSearch(event);
+    if (event?.length > 0) setShowAutoComplete(true);
+    autoComplete();
     if (event === '') history.push('/');
   };
 
@@ -85,8 +87,8 @@ const Search: React.FC<any> = () => {
     inputRef.current?.focus();
     if (inputSearch) {
       debounceLoadData(inputSearch);
-      if (autocomplete?.length > 0) setShowAutoComplete(true);
-      autoComplete();
+      // if (autocomplete?.length > 0) setShowAutoComplete(true);
+      // autoComplete();
       if (inputSearch?.length === 0) history.push('/');
     }
   }, [inputSearch]);
